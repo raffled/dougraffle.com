@@ -29,7 +29,7 @@
           <li><a href="docs/raffle_resume_public.pdf" target="_blank" class="button">R&#233;sum&#233;</a></li>
           <li><a href="contact.html" class="button">Contact</a></li>  
           <li><a href="stat111.html" class="button">STAT 111</a></li>
-	  <li><a href="index.html" class=button> Home </a></li>
+	  <li><a href="http://stat.wvu.edu/~draffle/" class=button> Home </a></li>
 	</ul>
       </div>
     </div>
@@ -277,22 +277,19 @@
     
     <!-- Footer -->
     <footer class="row">
-      <hr>
       <div class="large-12 columns">
-	<a rel="license"
-	   href="http://creativecommons.org/licenses/by-nc-sa/4.0/">
-	  <img alt="Creative Commons License" style="border-width:0"
-	       src="https://i.creativecommons.org/l/by-nc-sa/4.0/80x15.png"
-	       />
-	</a>
-	<br />This work is licensed under a
-	<a rel="license"
-	   href="http://creativecommons.org/licenses/by-nc-sa/4.0/">
-	  Creative Commons Attribution-NonCommercial-ShareAlike 4.0
-	  International License
-	</a>. 
+        <div class="row">
+          <div class="large-6 columns">
+            <p>Doug Raffle</p>
+          </div>
+          <div class="large-6 columns">
+            <ul class="inline-list right">
+              <li><a href="http://stat.wvu.edu">Statistics Department</a></li>
+            </ul>
+          </div>
+	</div>
       </div>
-    </footer>
+    </footer>      
     <!-- Init Javascript -->
     <script src="js/vendor/jquery.js"></script>
     <script src="js/vendor/fastclick.js"></script>
