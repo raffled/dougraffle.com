@@ -1,0 +1,171 @@
+---
+title: 'Seismic Data -- Exploratory Data Analysis'
+author: "Doug Raffle"
+output:
+  html_document:
+    toc: true
+---
+
+The purpose of this document is to explore a data set of $20,000$
+seismic events obtained from the U.S. Geological Survey.  We begin by examining the summary statistics for
+each variable.
+
+# Full Data Set
+## Numeric Summary
+```{r}
+library(dplyr, warn.conflicts = FALSE)
+library(tidyr, , warn.conflicts = FALSE)
+library(ggplot2)
+library(GGally, warn.conflicts = FALSE)
+seismic <- read.csv("seismic_data.csv")
+dim(seismic)
+summary(seismic)
+```
+
+Definitions of these variables can be found
+[here](http://earthquake.usgs.gov/earthquakes/feed/v1.0/glossary.php).
+
+Several of these variable describe the measurements and not the
+seismic event, so we'll reduce the data set to only include variables that describe the event itself.
+
+```{r warning = FALSE}
+seismic <- seismic %>%
+    select(-magType, -nst, -gap, -dmin, -net, -updated) %>%
+    mutate(type = factor(type))
+```
+
+Now we can begin to examine the correlations of our numeric variabls.
+```{r}
+numeric.cols <- sapply(seismic, function(col) is.numeric(col))
+numeric.cols[2:3] <- FALSE
+cor(na.omit(seismic[numeric.cols]))
+```
+
+We can see some weak correlation between some variables, like `mag` & `depth` and `rms` and `depth`, and
+one moderate correlation between `rms` and `mag`.
+
+## Graphical Summary
+First, we'll take a look at the number of events by type.
+```{r}
+ggplot(seismic, aes(x = type, fill = type)) + geom_bar() +
+    coord_flip()
+```
+
+We can see that the vast majority of events are earthquakes, which would make the problem of predicting type interesting.  From here, we can move on to visualizing our data.
+
+```{r, warning = FALSE}
+ggpairs(seismic[, numeric.cols])
+```
+
+For all of our variables we have significant right-skew.  We also some bi-modality in `mag` and `rms`, suggesting
+two distinct populations.
+
+None of our variables show a particularly useful linear relationship, so modelling any one with the others won't be particularly productive.
+
+Next, we should check the distributions against the type to see if they'd have any predictive value in determining the type.
+
+```{r, warning = FALSE}
+ggplot(seismic, aes(x = mag)) +
+    geom_histogram(aes(y = ..density..), binwidth = 0.25) +
+    facet_wrap(~type, ncol = 2)
+ggplot(seismic, aes(x = depth)) +
+    geom_histogram(aes(y = ..density..), binwidth = 15) +
+    facet_wrap(~type, ncol = 2)
+ggplot(seismic, aes(x = rms)) +
+    geom_histogram(aes(y = ..density..), binwidth = 0.2) +
+    facet_wrap(~type, ncol = 2)
+```
+
+The centers of the distributions of magnitude look distinct, which may prove useful.  
+
+All the non-earthquakes look to be at or near surface-level, so depth might be good to distinguish earthquakes from non-earthquakes.
+
+The `rms` variable is the root-mean-square error in the prediction of the velocity of the event.  As such, the right-skew we see is expected.  It looks like the velocity of explosions, particularly mining explosions, is hard to predict, while the rest are generally concentrated at zero.  This may be useful for disinguishing explosions from other event types.
+
+# The Continental U.S.
+## Subsetting the data
+The overwhelming number of earthquakes is making it difficult to
+examine the properties of our other variable types. One option would
+be to examine the other types without the earthquakes.  This, however,
+might be too drastic in that we won't be able to find relationships
+between earthquakes and our other types.
+
+By mapping the data ([http://raffled.shinyapps.io/seismic](http://raffled.shinyapps.io/seismic)), a more interesting solution presents itself.  It
+looks like the only place where the reporting networks gave us
+non-earthquake events is in the continental United States.  If we want
+to find relationships between the event types, it might be wise to
+restrict our sample to only those events which occurred in this
+region.
+
+```{r}
+seismic <- seismic %>%
+    filter(latitude < 49,
+           latitude > 18,
+           longitude < -63.37,
+           longitude > -124.6) %>%
+    mutate(type = factor(type))
+```
+
+## Numerical Summary
+```{r}
+summary(seismic)
+dim(seismic)
+numeric.cols <- sapply(seismic, function(col) is.numeric(col))
+numeric.cols[2:3] <- FALSE
+cor(na.omit(seismic[numeric.cols]))
+```
+
+Our correlations all decreased, unfortunately, but since we reduced our sample size from 20,000 to 8953, this 
+isn't completely unexpected.
+
+## Graphical Summary
+```{r, warning = FALSE}
+ggplot(seismic, aes(x = type, fill = type)) + geom_bar() +
+    coord_flip()
+```
+
+While we still mostly have earthquakes, we do see a higher proportion
+of other events.
+
+```{r, warning = FALSE}
+ggpairs(seismic[, numeric.cols])
+```
+
+Despite the reduced correlation coefficients, we see some clearer patterns in the scatterplots.
+```{r, warning = FALSE}
+ggplot(seismic, aes(x = mag)) +
+    geom_histogram(aes(y = ..density..), binwidth = 0.25) +
+    facet_wrap(~type, ncol = 2)
+ggplot(seismic, aes(x = depth)) +
+    geom_histogram(aes(y = ..density..), binwidth = 15) +
+    facet_wrap(~type, ncol = 2)
+ggplot(seismic, aes(x = rms)) +
+    geom_histogram(aes(y = ..density..), binwidth = 0.2) +
+    facet_wrap(~type, ncol = 2)
+```
+
+We certainly see more of the variability in our variables with this
+restricted sample. For tasks like predicting an event type, this will
+be essential.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

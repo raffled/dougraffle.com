@@ -1,0 +1,152 @@
+<!doctype html>
+<html class="no-js" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="css/foundation.css" />
+    <script src="js/vendor/modernizr.js"></script>
+    <link rel="shortcut icon" href="img/dr.ico">
+  </head>
+  <body>
+    <!-- Header and Nav -->
+    <div class="row">
+      <div class="large-3 columns">
+        <h1>Portfolio</h1>
+      </div>
+      <div class="large-8 columns">
+	      <ul class="button-group even-4">
+          <li><a href="docs/resume_public.pdf" target="_blank" class="button">R&#233;sum&#233;</a></li>
+          <li><a href="contact.html" class="button">Contact</a></li>  
+          <li><a href="stat111.html" class="button">STAT 111</a></li>
+	        <li><a href="http://stat.wvu.edu/~draffle/" class=button> Home </a></li>
+	      </ul>
+      </div>
+    </div>
+    <!-- End Header and Nav -->
+    
+    
+
+    <!-- Content -->
+    <div class="row">
+      <hr>
+        <h5><b>Overview</b></h5>
+        This is a collection of projects I've worked on that I think are particularly cool.  Whether created for class
+        projects, formal research, or just for fun (and practice), I hope you find them as interesting as I did.  
+      <hr>
+      <dl class="accordion" data-accordion>
+          <dd class="accordion-navigation">
+            <a href="#mylan">Sentiment Analysis: Mylan Pharmaceuticals</a>
+            <div id="mylan" class="content active">
+              <p>
+                While I was toying around with topics to analyze on Twitter, a friend of mine who works for Mylan, Dan Piett, 
+                pointed me towards the stories that were flying around about bidding wars between three generic pharmaceutical
+                companies: Mylan, Perrigo, and Teva.  Mylan is a pillar of the Morgantown community, so their being bought out
+                would be huge news in Morgantown.
+              </p>
+              <p>
+                We pulled the most recent tweets with the hashtag #Mylan and performed sentiment analysis to see what the Twittersphere
+                had to say about the generics wars.
+              </p>
+              <p>
+                The analysis is <a href = "docs/sentiment/mylanSentiment.html" target = "_blank">here</a>.
+              </p>
+            </div>
+          </dd>
+          <dd class="accordion-navigation">
+            <a href = "#usgs">USGS Seismic Data</a>
+            <div id="usgs" class="content">
+            	<p>
+            	  These projects were created from data pulled from the U.S. Geological Survey's 
+            	  <a href="http://earthquake.usgs.gov/earthquakes/search/" target="_blank"> Earthquake Archives</a>.
+            	  The data set includes information about 20,000 global seismic events that occured from January 1, 2015 to
+            	  April 15, 2015.
+            	</p>
+            	<h5><b>Interactive Map</b></h5>
+            	<p>
+            	  First, I created an interactive map showing the location of the seismic events using 
+            	  <a href="http://www.rstudio.com/" target="_blank">RStudio</a>'s 
+            	  <a href="http://shiny.rstudio.com/" target="_blank">Shiny</a> package.  Each point represents one event. 
+            	  Events are colored according to event type (earthquake, exposion, etc.) and scaled by magnitude.  
+            	  Because plotting all the events takes a while, the map is restricted to the 8,480 events which occured
+            	  in the six weeks of March 1, 2015 - April 15, 2015.
+            	</p>
+            	<p>
+            	  The map can be found here: 
+            	  <a href="http://raffled.shinyapps.io/seismic" target="_blank">http://raffled.shinyapps.io/seismic</a>
+            	</p>
+            	<p>
+            	  Please note that this is very much a work in progress, so your patience with bugs is appreciated.
+            	  The map also seems to hang up a bit in Firefox and Internet Explorer, so I'd recommend running it
+            	  in Chrome.
+            	</p>
+            	<h5><b>Exploratory Data Analysis</b></h5>
+            	<p>
+            	  This is a basic exploration of the USGS data set, written in R Markdown, including numerical and
+            	  graphical summaries of the data set.
+            	</p>
+            	<p>
+            	  Check out the EDA <a href = "docs/seismicEDA.html" target = "_blank">here</a>.
+            	</p>
+            	<h5><b>Predictive Modelling</b></h5>
+            	<h6>Classification</h6>
+            	<p>
+            	  First, I wanted to play around with some classification models.  This is less of a technical report and more of a 
+            	  comparison of how different methods work for this data.  The modelling is particularly challenging because of the 
+            	  context of the problem: 96.4% of the observations are of the same class.
+            	</p>
+            	<p>
+            	  You can see the results <a href = "docs/seismicModelling.html" target = "_blank">here</a>.
+            	</p>
+      	    </div>
+      	  </dd>
+      	  <dd class="accordion-navigation">
+      	    <a href="#wvdp">West Virginia Dialect Project</a>
+      	    <div id="wvdp" class="content">
+      	      <p>
+                During the summer of 2014, I worked with Dr. Kirk Hazen and the 
+                <a href="http://dialects.english.wvu.edu/" target="_blank">West Virginia Dialect Project</a>.
+                The focus at the time was in the voicing of alveolar fricatives.  Basically, we wanted to find which
+                sociolinguistic variables, if any, differentiate Appalachians' creation of "s" and "z" sounds.
+              </p>
+              <p>
+                The data set contained 2,437 distinct observations of words containing "s" or "z" sounds recorded from
+                sixty-seven individuals from across West Virginia, Soutwestern Pennsylvania, and Southeastern Ohio. 
+                This paper summarizes my summer work and includes the exploratory data analysis and some descriptive modelling.
+                All analysis was conducted with R, and source code is included in the appendix.
+              </p>
+              <p>
+                You can check out the paper <a href="docs/dcraffle.695.pdf" target="_blank">here</a>. 
+              </p>
+      	    </div>
+      	  </dd>
+      </dl>
+    <hr>
+      
+    <!-- Footer -->
+    <footer class="row">
+      <hr />
+      <div class="large-12 columns">
+        <div class="row">
+          <div class="large-6 columns">
+            <p>Doug Raffle</p>
+          </div>
+          <div class="large-6 columns">
+            <ul class="inline-list right">
+              <li><a href="http://stat.wvu.edu">Statistics Department</a></li>
+            </ul>
+          </div>
+	      </div>
+      </div>
+    </footer>      
+    <!-- Init Javascript -->
+    <script src="js/vendor/jquery.js"></script>
+    <script src="js/vendor/fastclick.js"></script>
+    <script src="js/foundation.min.js"></script>
+    <script>
+      $(document).foundation();
+    </script>
+
+  </body>
+</html>
+    
