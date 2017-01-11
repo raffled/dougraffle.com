@@ -60,10 +60,82 @@
       <hr>
       <dl class="accordion" data-accordion>
         <dd class="accordion-navigation">
+	  <a href = "#customerClustering">
+	    <h5><b>Customer Analysis with Shiny</b></h5>
+	  </a>
+	  <div id="customerClustering" class="content active">
+	    <a href = "https://raffled.shinyapps.io/customer_clustering/" target="_blank">
+              <img src="img/3d_scatter.png" style="float:right;margin:0px 5px 5px
+                   25px;" width=500px title = "3d Scatter of Customer Clusters
+                   -- Click to Launch App"/>
+            </a>
+	    <p>
+	      For any company, better understanding of its customers can give a
+	      competitive edge when negotiating contracts.  This app, inspired
+	      by my time at Mylan (but created on my own time with simulated
+	      data), is designed as a tool to help understand 
+	      customers based on their purchasing behavior and history.
+	    </p>
+	    <p>
+	      Included in the app are tools for clustering customers based on
+	      their contract history and analyzing their purchasing behavior
+	      based on market position and types of products bought.  There's a
+	      detailed readme within the app itself describing these tools in
+	      more detail.
+	    </p>
+	    Check out the:
+	    <ul type = "square">
+	      <li>
+		<a href="https://raffled.shinyapps.io/customer_clustering/"
+		   target="_blank">
+		  Shiny App
+		</a>
+	      </li>
+	      <li>
+		Source code on
+		<a href="https://github.com/raffled/Customer-Clustering"
+		   target="blank">
+		  GitHub
+		</a>
+	    </ul>
+	  </div>
+	  <a href = "#titanicTableau">
+	    <h5><b>Titanic Survival with Tableau</b></h5>
+	  </a>
+	  <div id="titanicTableau" class="content">
+	    <a href =
+	       "https://public.tableau.com/views/Titanic_247/SingleVariableSummaries?:embed=y&:display_count=yes"
+	       target="_blank">
+              <img src="img/titanic_gender.PNG" style="float:left;margin:10px
+	       50px 10px 0px"
+		   width=400px title = "Titanic Survival by Gender -- Click to
+	       Open Dashboard"/>
+            </a>
+	    <p>
+	      I designed this workbook while teaching Business Stats at CalU
+	      as part of a discuession on displaying and analyzing categorical
+	      data.  Nothing gets undergrads interested like death and disaster,
+	      so I pulled public data on the passengers of the Titanic.
+	    </p>
+	    <p>
+	      While discussion and conclusions were left up to the students, I
+	      designed plots that summarized the individual variables as well as
+	      plots showing relationships between two and three variables.
+	    </p>
+	    <p>
+	      You can check out
+	      <a href="https://public.tableau.com/views/Titanic_247/SingleVariableSummaries?:embed=y&:display_count=yes"
+		 target="_blank">
+		Tableau Public
+	      </a>
+	      to see the dashboard.  Please note that, as of right now, the app
+	      is only designed with desktop layouts in mind.
+	    </p>
+	  </div>
           <a href = "#twitteRStorm">
 	    <h5><b>Streaming Analysis: Twitter and RStorm</b></h5>
 	  </a>
-          <div id="twitteRStorm" class="content active">
+          <div id="twitteRStorm" class="content">
             <a href = "img/tstorm.png" target="_blank">
               <img src="img/tstorm.png" style="float:right;margin:0px 5px 5px
                    25px;" width=400px title = "Tweet Rate Over Time -- Click to Enlarge"/>
