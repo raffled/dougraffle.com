@@ -26,7 +26,9 @@
       </div>
       <div class="large-8 columns">
 	<ul class="button-group right">
-          <li><a href="docs/raffle_resume_public.pdf" target="_blank" class="button">R&#233;sum&#233;</a></li>
+          <li><a href="docs/raffle_resume_public.pdf" target="_blank"
+		 class="button">
+	      R&#233;sum&#233;</a></li>
           <li><a href="contact.html" class="button">Contact</a></li>  
           <li><a href="stat111.html" class="button">STAT 111</a></li>
 	  <li><a href="index.html" class=button> Home </a></li>
@@ -41,11 +43,14 @@
     <div class="row">
       <hr>
       <p>
-        This is a collection of projects I've worked on that I think are particularly cool.  Whether created for class
-        projects, formal research, or just for fun (and practice), I hope you find them as interesting as I did.  
-        Feel free to browse the projects on my <a href="http://github.com/raffled" target="_blank">Github</a> page, or
-        take the guided tour of selected projects below.  Direct links to the formatted documents (Shiny apps, knitted HTML, or PDF)
-        are provided, as well as to the specific repositories containing the source code.
+        This is a collection of projects I've worked on that I think are
+        particularly cool.  Whether created for class projects, formal research,
+        or just for fun (and practice), I hope you find them as interesting as I
+        did. Feel free to browse the projects on
+        my <a href="http://github.com/raffled" target="_blank">GitHub</a> page,
+        or take the guided tour of selected projects below.  Direct links to the
+        formatted documents (Shiny apps, knitted HTML, or PDF) are provided, as
+        well as to the specific repositories containing the source code.  
       </p>
       <p>
         Click on each header in the accordion to expand the project descriptions.
@@ -55,102 +60,149 @@
       <hr>
       <dl class="accordion" data-accordion>
         <dd class="accordion-navigation">
-          <a href = "#twitteRStorm"><h5><b>Streaming Analysis: Twitter and RStorm</b></h5></a>
+          <a href = "#twitteRStorm">
+	    <h5><b>Streaming Analysis: Twitter and RStorm</b></h5>
+	  </a>
           <div id="twitteRStorm" class="content active">
             <a href = "img/tstorm.png" target="_blank">
-              <img src="img/tstorm.png" style="float:right;margin:0px 5px 5px 25px;" width=400px
-                   title = "Tweet Rate Over Time -- Click to Enlarge"/>
+              <img src="img/tstorm.png" style="float:right;margin:0px 5px 5px
+                   25px;" width=400px title = "Tweet Rate Over Time -- Click to Enlarge"/>
             </a>
             <p>
-              <a href="https://storm.apache.org/" target="_blank">Apache Storm</a> is a framework for 
-              analyzing large volumes of data in real-time.  A common example of streaming
-              data is analyzing tweets matching certain keyword, like a company watching for tweets during
-              a marketing campaign.
+              <a href="https://storm.apache.org/" target="_blank">Apache
+              Storm</a> is a framework for analyzing large volumes of data in
+              real-time.  A common example of streaming data is analyzing tweets
+              matching certain keyword, like a company watching for tweets
+              during a marketing campaign.
             </p> 
             <p>
-              This project focusing on prototyping a streaming framework using the R package <tt>RStorm</tt>,
-              allowing for the simulation and prototyping of a stream from within the comfort of the R environment.
-              The project focusing on developing a workflow for analyzing tweets containing the term "Comcast,"
+              This project focusing on prototyping a streaming framework using
+              the R package <tt>RStorm</tt>, allowing for the simulation and
+              prototyping of a stream from within the comfort of the R
+              environment. The project focusing on developing a workflow for
+              analyzing tweets containing the term "Comcast," 
               since they are a company known to stir strong feelings.
             </p>
             <p>
-              The <a href="https://github.com/raffled/twitteRStorm" target="_blank">github repository</a> includes
-              source code for a <a href="twitteRStorm/presentation/twitteRStorm.html" target="_blank">IOSlides 
-                presentation</a>
-              and <a href="twitteRStorm/tutorial/tutorial.html" target="_blank">tutorial</a> on the project
-              given at <a href="http://www.interface2015.com" target="_blank">Interface 2015</a>.  A video of
-              the presentation is available on <a href="http://youtu.be/1Kz7ja95zcs" target="_blank">Youtube</a>
+              The <a href="https://github.com/raffled/twitteRStorm"
+		     target="_blank">github repository</a>
+	      includes source code for
+	      an <a href="twitteRStorm/presentation/twitteRStorm.html"
+		   target="_blank">IOSlides presentation</a>
+              and
+	      <a href="twitteRStorm/tutorial/tutorial.html" target="_blank">
+		tutorial
+	      </a> 
+	      on the project 
+              given at
+	      <a href="http://www.interface2015.com" target="_blank">
+		Interface 2015
+	      </a>.
+	      A video of the presentation is available on
+	      <a href="http://youtu.be/1Kz7ja95zcs" target="_blank">Youtube</a> 
               (I'd recommend streaming in 1080p so the text is easier to read).
             </p>
             <p>
-              Also included is
-              a <a href="http://raffled.shinyapps.io/comcast_dash" target="_blank">Shiny Dashboard</a>, meant to
-              illustrate how a live dashboard for monitoring a company's Twitter presence might look.
+              Also included is a
+	      <a href="http://raffled.shinyapps.io/comcast_dash"
+		 target="_blank">
+		Shiny Dashboard,
+	      </a>
+	      designed to illustrate how a live dashboard for monitoring a
+	      company's Twitter presence might look. 
             </p>
           </div>
         </dd>
         <dd class="accordion-navigation">
-          <a href="#mylan"><h5><b>Sentiment Analysis: Mylan Pharmaceuticals</b></h5></a>
+          <a href="#mylan">
+	    <h5><b>Sentiment Analysis: Mylan Pharmaceuticals</b></h5>
+	  </a>
           <div id="mylan" class="content">
             <div class = "large-4 columns"></div>
             <a href = "img/mylan_wordcloud.png" target="_blank">
-              <img src="img/mylan_wordcloud.png" style="float:right;margin:0px 5px 5px 25px;" width=450px
+              <img src="img/mylan_wordcloud.png" style="float:right;margin:0px
+                   5px 5px 25px;" width=450px 
                    title = "Word Cloud of Mylan Tweets -- Click to Enlarge"/>
             </a>
             <p>
-              While I was toying around with topics to analyze on Twitter, a friend of mine who works for Mylan
-              pointed me towards the stories that were flying around about bidding wars between three generic pharmaceutical
-              companies: Mylan, Perrigo, and Teva.  Mylan is a pillar of the Morgantown community, so their being bought out
-              would be huge news in Morgantown.
+              While I was toying around with topics to analyze on Twitter in
+              grad school, a friend of mine who works for Mylan pointed me
+              towards the stories that were flying around about bidding wars
+              between three generic pharmaceutical companies: Mylan, Perrigo,
+              and Teva.  Mylan is a pillar of the Morgantown community, so their
+              being bought out would be huge news in Morgantown.
             </p>
             <p>
-              We pulled the most recent tweets with the hashtag #Mylan on April 24, 2015 and performed sentiment analysis to 
-              see what the Twittersphere
-              had to say about the generics wars.
+              We pulled the most recent tweets with the hashtag #Mylan on April
+              24, 2015 and performed sentiment analysis to see what the
+              Twittersphere had to say about the generics wars. 
             </p>
             <p>
-              The analysis is <a href = "portfolio/mylanSentiment.html" target = "_blank">here</a>.
+              The analysis is
+	      <a href = "portfolio/mylanSentiment.html" target = "_blank">
+		here.
+	      </a>
               You can also check out the source code on 
-              <a href="https://github.com/raffled/Sentiment/" target="_blank">on Github</a>
+              <a href="https://github.com/raffled/Sentiment/" target="_blank">
+		on GitHub.
+	      </a>
             </p>
           </div>
         </dd>
         <dd class="accordion-navigation">
-          <a href = "#usgs"><h5><b>USGS Seismic Data</b></h5></a>
+          <a href = "#usgs">
+	    <h5><b>USGS Seismic Data</b></h5>
+	  </a>
           <div id="usgs" class="content">
-            <a href = "http://raffled.shinyapps.io/seismic" target="_blank">
-              <img src="img/quakemap.png" style="float:left;margin:15px;" width=415px 
+            <a href = "http://raffled.shinyapps.io/seismic" target="_blank"> 
+              <img src="img/quakemap.png" style="float:left;margin:15px;"
+		   width=415px  
                    title="Shot of the Interactive Map -- Click to Access the Full Map">
             </a>
             <p>  
-              The data set includes information about 20,000 global seismic events that occured from January 1, 2015 to
-              April 15, 2015.  Links to the final projects are provided, and all of the source code can be found on
-              on <a href="https://github.com/raffled/seismic/" target="_blank">Github</a>.
+              The data set includes information about 20,000 global seismic
+              events that occured from January 1, 2015 to April 15, 2015.  Links
+              to the final projects are provided, and all of the source code can
+              be found on
+	      <a href="https://github.com/raffled/seismic/" target="_blank">
+		GitHub
+	      </a>.
             </p>
             <h5><b>Interactive Map</b></h5>
             <p>
-              First, I created an interactive map showing the location of the seismic events using 
-              <a href="http://www.rstudio.com/" target="_blank">RStudio</a>'s 
-              <a href="http://shiny.rstudio.com/" target="_blank">Shiny</a> package.  Each point represents one event. 
-              Events are colored according to event type (earthquake, exposion, etc.) and scaled by magnitude.  
-              Because plotting all the events takes a while, the map is restricted to the 8,480 events which occured
+              First, I created an interactive map showing the location of the
+              seismic events using  
+              <a href="http://www.rstudio.com/" target="_blank">
+		RStudio's
+	      </a>
+              <a href="http://shiny.rstudio.com/" target="_blank">
+		Shiny
+	      </a>
+	      package.  Each point represents one event. Events are colored
+              according to event type (earthquake, exposion, etc.) and scaled by
+              magnitude.   Because plotting all the events takes a while, the
+              map is restricted to the 8,480 events which occured 
               in the six weeks of March 1, 2015 - April 15, 2015.
             </p>
             <p>
               Click on the image to the left to access the map.
             </p>
             <p>
-              Please note that this is very much a work in progress, so your patience with bugs is appreciated.
-              The map also seems to hang up a bit in Firefox and Internet Explorer, so I'd recommend running it
+              Please note that this is very much a work in progress, so your
+              patience with bugs is appreciated. The map also seems to hang up a
+              bit in Firefox and Internet Explorer, so I'd recommend running it 
               in Chrome.
             </p>
             <h5><b>Exploratory Data Analysis</b></h5>
             <p>
-              This is a basic exploration of the USGS data set, written in R Markdown, including numerical and
-              graphical summaries of the data set.
+              This is a basic exploration of the USGS data set, written in R
+              Markdown, including numerical and graphical summaries of the data set.
             </p>
             <p>
-              Check out the EDA <a href = "portfolio/seismicEDA.html" target = "_blank">here</a>.
+              Check out the EDA
+	      <a href = "portfolio/seismicEDA.html" target = "_blank">
+		here.
+	      </a>
             </p>
             <a href = "img/quakes.png" target="_blank">
               <img src="img/quakes.png" style="float:right;margin:25px;" width=500px 
@@ -159,71 +211,120 @@
             <h5><b>Predictive Modelling</b></h5>
             <h6>Classification</h6>
             <p>
-              First, I wanted to play around with some classification models, so I wanted to see if the three variable describing the seismic
-              event could be used to predict the type of event. While not a practical problem (if there's a large seismic even near me, I care more
-              about the magnitude than what caused it), it is particularly challenging because of the 
-              nature of the data: 96.4% of the observations are earthquakes.  I tuned several different models and compared their results.
+              First, I wanted to play around with some classification models, so
+              I wanted to see if the three variable describing the seismic 
+              event could be used to predict the type of event. While not a
+              practical problem (if there's a large seismic even near me, I care
+              more about the magnitude than what caused it), it is particularly
+              challenging because of the  nature of the data: 96.4% of the
+              observations are earthquakes.  I tuned several different models
+              and compared their results. 
             </p>
             <p>
-              You can see the results <a href = "portfolio/seismicModelling.html" target = "_blank">here</a>.
+              You can see the results
+	      <a href = "portfolio/seismicModelling.html" target = "_blank">
+		here.
+	      </a>
             </p>
-            <p>
-              As I have time, I plan to try my hand at developing some geospatial models to predict the frequencies of the events.
-            </p>
-            
       	  </div>
       	</dd>
       	<dd class="accordion-navigation">
-      	  <a href="#datavis"><h5><b>Boston Housing: Data Visualization</b></h5></a>
+      	  <a href="#datavis">
+	    <h5><b>Boston Housing: Data Visualization</b></h5>
+	  </a>
       	  <div id="datavis" class="content">
       	    <a href = "img/scatter.svg" target="_blank">
-              <img src="img/scatter.jpg" style="float:left;margin:5px;" width=400px 
-                   title="A Scatter Plot of the Log(Median Home Value) vs Log(Criminality Score) Colored by Radial Highway Index">
+              <img src="img/scatter.jpg" style="float:left;margin:5px;"
+		   width=400px  
+                   title="A Scatter Plot of the Log(Median Home Value) vs
+		   Log(Criminality Score) Colored by Radial Highway Index"> 
             </a>
       	    <p>
-      	      For an assignment in a data visualization class, we were tasked with performing an exploratory data analysis (EDA) on 
-      	      the Boston data set in R's MASS package.  The data set details the home values in Boston's suburbs in the 70s.
+      	      For an assignment in a data visualization class, we were tasked
+      	      with performing an exploratory data analysis (EDA) on the Boston
+      	      data set in R's <tt>MASS</tt> package.  The data set details the
+      	      home values in Boston's suburbs in the 70s. 
       	    </p>
       	    <p>
-      	      The EDA was first done using R's <a href="http://ggplot2.org/" target="_blank">ggplot</a> package and then repeated 
-      	      using the up-and-coming <a href="http://ggvis.rstudio.com/" target="_blank">ggvis</a> package.
+      	      The EDA was first done using R's
+	      <a href="http://ggplot2.org/" target="_blank">
+		ggplot
+	      </a>
+	      package and then repeated using the up-and-coming
+	      <a href="http://ggvis.rstudio.com/" target="_blank">
+		ggvis
+	      </a>
+	      package.
       	    </p>
       	    <p>
-      	      You can find the ggplot version <a href="portfolio/boston_ggplot.html" target="_blank">here</a> and its
-      	      source code on <a href="https://github.com/raffled/boston-vis/tree/master/ggplot" target="blank">Github</a>.
+      	      You can find the ggplot version
+	      <a href="portfolio/boston_ggplot.html" target="_blank">
+		here
+	      </a>
+	      and its source code on
+	      <a href="https://github.com/raffled/boston-vis/tree/master/ggplot"
+		 target="blank">
+		GitHub
+	      </a>.
       	    </p>
       	    <p>
-      	      The ggvis version is <a href="portfolio/boston_ggvis.html" target="_blank">here</a>, and
-      	      <a href="https://github.com/raffled/boston-vis/tree/master/ggvis" target="blank">here</a> is the
-      	      source code.
+      	      The ggvis version is
+	      <a href="portfolio/boston_ggvis.html" target="_blank">
+		here
+	      </a>, and
+      	      <a href="https://github.com/raffled/boston-vis/tree/master/ggvis"
+		 target="blank">
+		here
+	      </a>
+	      is the source code.
       	    </p>
       	  </div>
       	</dd>
       	<dd class="accordion-navigation">
-      	  <a href="#hadoop"><h5><b>Hadoop: MSNBC Pageviews</b></h5></a>
+      	  <a href="#hadoop">
+	    <h5><b>Hadoop: MSNBC Pageviews</b></h5>
+	  </a>
       	  <div id="hadoop" class="content">
       	    <a href = "img/run_hadoop.png" target="_blank">
-              <img src="img/run_hadoop.png" style="float:right;margin:5px 5px 5px 5px;" width=500px
+              <img src="img/run_hadoop.png"
+		   style="float:right;margin:5px 5px 5px 5px;"
+		   width=500px
                    title="Some of the Code Used to Run Hadoop">
             </a>
             <p>
-              This analysis was done as part of my High Performance Computing class. The data set is a sequence file of 
-              nearly one-million pageviews of MSNBC.com, where each entry is an integer corresponding to the category of 
-              the page the user visited.  The day was broken up into ten ranges of time and the categories clustered using 
-              Jaccard distances.
+              This analysis was done as part of my High Performance Computing
+              class. The data set is a sequence file of nearly one-million
+              pageviews of MSNBC.com, where each entry is an integer
+              corresponding to the category of the page the user visited.  The
+              day was broken up into ten ranges of time and the categories
+              clustered using Jaccard distances.
             </p>
             <p>
               The task was first performed with Hadoop directly.  Check out the 
-              <a href="portfolio/msnbc_hadoop.html" target="_blank">report</a> and the 
-              <a href="https://github.com/raffled/STAT624/tree/master/hw/assign2" target="_blank">source code</a>.
+              <a href="portfolio/msnbc_hadoop.html" target="_blank">
+		report
+	      </a> and the 
+              <a href="https://github.com/raffled/STAT624/tree/master/hw/assign2"
+		 target="_blank">
+		source code
+	      </a>.
             </p>
             <p>
               For the next version, the analysis is repeated using
-              <a href="http://tessera.io/" target="_blank">Tessera</a>'s
-              <a href="http://tessera.io/docs-RHIPE/" target="_blank">Rhipe</a>
+              <a href="http://tessera.io/" target="_blank">
+		Tessera's
+	      </a>
+              <a href="http://tessera.io/docs-RHIPE/" target="_blank">
+		Rhipe
+	      </a>
               package, which communicates with Hadoop from within an R session. 
-              <a href="portfolio/msnbc_rhipe.html" target="_blank">Here's</a> the Rhipe version, and the source code
-              is on <a href="https://github.com/raffled/STAT624/tree/master/hw/assign3" target="_blank">Github</a>.
+              <a href="portfolio/msnbc_rhipe.html" target="_blank">
+		Here's
+	      </a> the Rhipe version, and the source code
+              is on
+	      <a href="https://github.com/raffled/STAT624/tree/master/hw/assign3"
+		 target="_blank">
+		GitHub</a>.
             </p>
       	  </div>
       	</dd>
@@ -235,12 +336,16 @@
                    title="A small sample of code used in a K-NN Assignment">
             </a>
             <p>
-              This is a collection of data mining algorithm implementations and derivations completed for our course in the subject.
+              This is a collection of data mining algorithm implementations and
+              derivations completed for our course in the subject. 
             </p>
             <p>
-              I'm in the process of cleaning everything up and moving them from local directories to my Github page, but 
-              you can see what's up so far here: 
-              <a href="https://github.com/raffled/Data-Mining" target="_blank">https://github.com/raffled/Data-Mining</a>
+              I'm in the process of cleaning everything up and moving them from
+              local directories to my GitHub page, but  you can see what's up so
+              far here:  
+              <a href="https://github.com/raffled/Data-Mining" target="_blank">
+		https://github.com/raffled/Data-Mining
+	      </a>
             </p>
       	  </div>
       	</dd>
@@ -253,21 +358,33 @@
             </a>
       	    <p>
               During the summer of 2014, I worked with Dr. Kirk Hazen and the 
-              <a href="http://dialects.english.wvu.edu/" target="_blank">West Virginia Dialect Project</a>.
-              The focus at the time was in the voicing of alveolar fricatives.  Basically, we wanted to find which
-              sociolinguistic variables, if any, differentiate Appalachians' creation of "s" and "z" sounds.
+              <a href="http://dialects.english.wvu.edu/" target="_blank">
+		West Virginia Dialect Project
+	      </a>.
+              The focus at the time was in the voicing of alveolar fricatives.
+              Basically, we wanted to find which sociolinguistic variables, if
+              any, differentiate Appalachians' creation of "s" and "z" sounds. 
             </p>
             <p>
-              The data set contained 2,437 distinct observations of words containing "s" or "z" sounds recorded from
-              sixty-seven individuals from across West Virginia, Soutwestern Pennsylvania, and Southeastern Ohio. 
-              This paper summarizes my summer work and includes the exploratory data analysis and some descriptive modelling.
-              All analysis was conducted with R, and source code is included in the appendix.
+              The data set contained 2,437 distinct observations of words
+              containing "s" or "z" sounds recorded from sixty-seven individuals
+              from across West Virginia, Soutwestern Pennsylvania, and
+              Southeastern Ohio.  This paper summarizes my summer work and
+              includes the exploratory data analysis and some descriptive
+              modeling. All analysis was conducted with R, and source code is
+              included in the appendix. 
             </p>
             <p>
-              You can check out the paper <a href="portfolio/wvdp.pdf" target="_blank">here</a> and
-              find the source code <a href="https://github.com/raffled/WVDP" target="_blank">on Github</a>.
-              Note that the data itself is not included in the repository, just the noweb file used to weave
-              the pdf.
+              You can check out the paper
+	      <a href="portfolio/wvdp.pdf" target="_blank">
+		here
+	      </a>
+	      and find the source code
+	      <a href="https://github.com/raffled/WVDP" target="_blank">
+		on GitHub.
+	      </a>
+              Note that the data itself is not included in the repository, just
+              the noweb file used to weave the pdf.
             </p>
       	  </div>
       	</dd>
