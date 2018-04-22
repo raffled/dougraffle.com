@@ -5764,7 +5764,7 @@ body {
   line-height: 2.75rem;
   width: 100%;
   background-color: rgba(34, 38, 41, 0.1);
-  transition: all 0.5s ease;
+  transition: all 0.3s ease;
 }
 
 .sticky-shrinknav-menu li {
@@ -5807,7 +5807,7 @@ body {
   position: fixed;
   top: 0;
   left: 0;
-  overflow: hidden;
+  overflow: visible;
   transition: all 0.5s ease;
 }
 
@@ -5816,7 +5816,7 @@ body.sticky-shrinknav-wrapper {
 }
 
 body.sticky-shrinknav-wrapper .sticky-shrinknav-header {
-  height: 2.75rem;
+  height: 3.75rem;
   background-color: rgba(34, 38, 41, 0.9);
 }
 
