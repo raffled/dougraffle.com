@@ -5,7 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>ADV</title>
     <link rel="stylesheet" href="css/foundation.css" />
+    <link rel="stylesheet" href="css/custom.css" />
     <link rel="shortcut icon" href="img/dr.ico">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/simplebar@latest/dist/simplebar.css">
+    <script src="https://cdn.jsdelivr.net/npm/simplebar@latest/dist/simplebar.js"></script>
     <style>
       ul li { margin-bottom: 13px; }
     </style>
@@ -40,15 +43,9 @@
       <!-- Begin overview w/ map-->
       <div class="grid-x grid-padding-x grid-padding-y">
 	<hr>
-	<div class="cell large-5">
-	  <h4>California, Etc.</h4>
-	  <p>
-	    If you're someone who wants to check to see that I'm not dead, here's
-	    a map of where I've been and maybe some updated photos of me not being
-	    dead at places!
-	  </p>
-	</div>
-	<div class="cell large-7">
+	<!-- main column -->
+	<div class="cell large-8">
+	  <!-- map -->
 	  <div class="media-object">
 	    <iframe
 	      src="
@@ -64,60 +61,277 @@
 	      >
 	    </iframe>
 	  </div>
-	</div>
-      </div>
-
-      <!-- Second Band (flickr gallery -->
-      <div class="grid-x grid-padding-x grid-padding-y">
-	<div class="cell large-12">
-	  <hr>
-	  <div id="flickrembed_9"></div>
-	  <div style="position:absolute;top:-70px;
-		      display:block;
-		      text-align:center;z-index:-1;">
+	  <!-- flickr -->
+	  <div class="cell large-12">
+	    <hr>
+	    <div id="flickrembed_9"></div>
+	    <div style="position:absolute;top:-70px;
+			display:block;
+			text-align:center;z-index:-1;">
+	    </div>
+	    <script src="
+			 https://flickrembed.com/embed_v2.js.rand.php?container=flickrembed_9&
+			 source=flickr&
+			 layout=responsive&
+			 input=www.flickr.com/photos/101160250@N05/albums/72157694055234411&
+			 sort=3&
+			 by=album&
+			 theme=default_notextpanel&
+			 scale=fit&
+			 limit=30&
+			 skin=default&
+			 autoplay=true
+			 ">
+	    </script>
+	    <small style="display: block; text-align: center; margin: 0 auto;">
+	      Shamelessly stolen from
+	      <a href="https://flickrembed.com">flickr embed</a>.
+	    </small>
 	  </div>
-	  <script src="
-		       https://flickrembed.com/embed_v2.js.rand.php?container=flickrembed_9&
-		       source=flickr&
-		       layout=responsive&
-		       input=www.flickr.com/photos/101160250@N05/albums/72157694055234411&
-		       sort=3&
-		       by=album&
-		       theme=default_notextpanel&
-		       scale=fit&
-		       limit=30&
-		       skin=default&
-		       autoplay=true
-		       ">
-	  </script>
-	  <small style="display: block; text-align: center; margin: 0 auto;">
-	    Shamelessly stolen from
-	    <a href="https://flickrembed.com">flickr embed</a>.
-	  </small>
-	</div>
-      </div>
 
-      <!-- Youtube stuff (mine) -->
-      <div class="grid-x grid-padding-x grid-padding-y">
-	<div class = "cell large-12">
-	  <hr>
-	  <div style="display:block;text-align:center;">
-	    <iframe
-	      width="840"
-	      height="475"
-	      src="https://www.youtube.com/embed/videoseries?list=PLYBU34q9JYhyHSifJHD9L0Scu-_MLzGbn&
-		   modestbranding=1&
-		   showinfo=1&
-		   rel=0&
-		   index=5
-		   "
-	      frameborder="0"
-	      allow="autoplay; encrypted-media"
-	      allowfullscreen>
-	    </iframe>
+	  <!-- Youtube stuff (mine) -->
+	  <div class = "cell large-12">
+	    <hr>
+	    <div style="display:block;text-align:center;">
+	      <iframe
+		width="600"
+		height="337"
+		src="https://www.youtube.com/embed/videoseries?list=PLYBU34q9JYhyHSifJHD9L0Scu-_MLzGbn&
+		     modestbranding=1&
+		     showinfo=1&
+		     rel=0&
+		     index=5
+		     "
+		frameborder="0"
+		allow="autoplay; encrypted-media"
+		allowfullscreen>
+	      </iframe>
+	    </div>
 	  </div>
+	</div> <!-- end 1st column -->
+
+	<!-- second column -->
+	<div class="cell large-4">
+	  <div class="simplebar-container" data-simplebar><div class="timeline">
+	    <div class="timeline-item">
+	      <div class="timeline-icon">
+		<img src="https://png.icons8.com/windows/40/ffffff/home.png"
+		     style="margin-left:-9px;margin-top:-7px">
+	      </div>
+	      <div class="timeline-content">
+		<p class="timeline-content-date">May 4</p>
+		<p>
+		  Hartford to Chicago
+		</p>
+	      </div>
+	    </div>
+	    <div class="timeline-item">
+	      <div class="timeline-icon">
+		<img src="https://png.icons8.com/ios/40/ffffff/company.png"
+		     style="margin-left:-9px;margin-top:-7px">
+	      </div>
+	      <div class="timeline-content right">
+		<p class="timeline-content-date">May 6</p>
+		<p>
+		  Chicago To Lincoln
+		</p>
+	      </div>
+	    </div>
+	    <div class="timeline-item">
+	      <div class="timeline-icon">
+		<img src="https://png.icons8.com/ios/40/ffffff/corn-filled.png"
+		     style="margin-left:-9px;margin-top:-7px">
+	      </div>
+	      <div class="timeline-content">
+		<p class="timeline-content-date">May 7</p>
+		<p>
+		  Lincoln to Denver
+		</p>
+	      </div>
+	    </div>
+	    <div class="timeline-item">
+	      <div class="timeline-icon">
+		<img src="https://png.icons8.com/ios/40/ffffff/mountain.png"
+		     style="margin-left:-9px;margin-top:-8px">
+	      </div>
+	      <div class="timeline-content right">
+		<p class="timeline-content-date">May 8</p>
+		<p>
+		  Denver to Salt Lake City
+		</p>
+	      </div>
+	    </div>
+	    <div class="timeline-item">
+	      <div class="timeline-icon">
+		<img src="https://png.icons8.com/ios/40/ffffff/western.png"
+		     style="margin-left:-9px;margin-top:-7px">
+	      </div>
+	      <div class="timeline-content">
+		<p class="timeline-content-date">May 9</p>
+		<p>
+		  Salt Lake City to NV BDR
+		</p>
+	      </div>
+	    </div>
+	    <div class="timeline-item">
+	      <div class="timeline-icon">
+		<img src="https://png.icons8.com/dotty/40/ffffff/motocross.png"
+		     style="margin-left:-9px;margin-top:-7px">
+	      </div>
+	      <div class="timeline-content right">
+		<p class="timeline-content-date">May 10</p>
+		<p>
+		  NV Offroad
+		</p>
+	      </div>
+	    </div>
+	    <div class="timeline-item">
+	      <div class="timeline-icon">
+		<img src="https://png.icons8.com/ios/40/ffffff/25-de-abril-bridge.png"
+		     style="margin-left:-9px;margin-top:-7px">
+	      </div>
+	      <div class="timeline-content">
+		<p class="timeline-content-date">May 11</p>
+		<p>
+		  NV to San Francisco
+		</p>
+	      </div>
+	    </div>
+	    <div class="timeline-item">
+	      <div class="timeline-icon">
+		<img src="https://png.icons8.com/ios/40/ffffff/deciduous-tree.png"
+		     style="margin-left:-9px;margin-top:-7px">
+	      </div>
+	      <div class="timeline-content right">
+		<p class="timeline-content-date">May 13</p>
+		<p>
+		  San Francisco to Death Valley
+		</p>
+	      </div>
+	    </div>
+	    <div class="timeline-item">
+	      <div class="timeline-icon">
+		<img src="https://png.icons8.com/dotty/40/ffffff/motocross.png"
+		     style="margin-left:-9px;margin-top:-7px">
+	      </div>
+	      <div class="timeline-content">
+		<p class="timeline-content-date">May 14</p>
+		<p>
+		  Death Valley Offroading
+		</p>
+	      </div>
+	    </div>
+	    <div class="timeline-item">
+	      <div class="timeline-icon">
+		<img src="https://png.icons8.com/windows/40/ffffff/sombrero.png"
+		     style="margin-left:-9px;margin-top:-7px">
+	      </div>
+	      <div class="timeline-content right">
+		<p class="timeline-content-date">May 17</p>
+		<p>
+		  Death Valley to Mexican Hat
+		</p>
+	      </div>
+	    </div>
+	    <div class="timeline-item">
+	      <div class="timeline-icon">
+		<img src="https://png.icons8.com/dotty/40/ffffff/motocross.png"
+		     style="margin-left:-9px;margin-top:-7px">
+	      </div>
+	      <div class="timeline-content">
+		<p class="timeline-content-date">May 18</p>
+		<p>
+		  UT Offroading
+		</p>
+	      </div>
+	    </div>
+	    <div class="timeline-item">
+	      <div class="timeline-icon">
+		<img src="https://png.icons8.com/ios/40/ffffff/grand-canyon-filled.png"
+		     style="margin-left:-9px;margin-top:-7px">
+	      </div>
+	      <div class="timeline-content right">
+		<p class="timeline-content-date">May 20</p>
+		<p>
+		  Moab to Telluride
+		</p>
+	      </div>
+	    </div>
+	    <div class="timeline-item">
+	      <div class="timeline-icon">
+		<img src="https://png.icons8.com/ios/40/ffffff/beer-bottle-filled.png"
+		     style="margin-left:-9px;margin-top:-7px">
+	      </div>
+	      <div class="timeline-content">
+		<p class="timeline-content-date">May 21</p>
+		<p>
+		  Western CO and Nate's
+		</p>
+	      </div>
+	    </div>
+	    <div class="timeline-item">
+	      <div class="timeline-icon">
+		<img src="https://png.icons8.com/ios/40/ffffff/mountain.png"
+		     style="margin-left:-9px;margin-top:-9px">
+	      </div>
+	      <div class="timeline-content right">
+		<p class="timeline-content-date">May 23</p>
+		<p>
+		  Denver
+		</p>
+	      </div>
+	    </div>
+	    <div class="timeline-item">
+	      <div class="timeline-icon">
+		<img src="https://png.icons8.com/ios/40/ffffff/field-filled.png"
+		     style="margin-left:-9px;margin-top:-7px">
+	      </div>
+	      <div class="timeline-content">
+		<p class="timeline-content-date">May 24</p>
+		<p>
+		  Denver to Topeka
+		</p>
+	      </div>
+	    </div>
+	    <div class="timeline-item">
+	      <div class="timeline-icon">
+		<img src="https://png.icons8.com/metro/40/ffffff/horse.png"
+		     style="margin-left:-10px;margin-top:-6px">
+	      </div>
+	      <div class="timeline-content right">
+		<p class="timeline-content-date">May 25</p>
+		<p>
+		  Topeka to Louisville
+		</p>
+	      </div>
+	    </div>
+	    <div class="timeline-item">
+	      <div class="timeline-icon">
+		<img src="https://png.icons8.com/color/40/ffffff/pittsburgh-map.png"
+		     style="margin-left:-9px;margin-top:-7px">
+	      </div>
+	      <div class="timeline-content">
+		<p class="timeline-content-date">May 24</p>
+		<p>
+		  Louisville to Pittsburgh
+		</p>
+	      </div>
+	    </div>
+	    <div class="timeline-item">
+	      <div class="timeline-icon">
+		<img src="https://png.icons8.com/windows/40/ffffff/home.png"
+		     style="margin-left:-9px;margin-top:-7px">
+	      </div>
+	      <div class="timeline-content right">
+		<p class="timeline-content-date">May 24</p>
+		<p>
+		  Pittsburgh to Hartford
+		</p>
+	      </div>
+	    </div>
+	  </div></div> <!-- end timeline -->
 	</div>
-      </div>
+      </div> <!-- end main content -->
 
       <!-- Footer -->
       <footer class="cell shrink footer">
@@ -144,6 +358,7 @@
     <script src="js/vendor/jquery.js"></script>
     <script src="js/vendor/fastclick.js"></script>
     <script src="js/vendor/foundation.js"></script>
+    <script src="js/custom.js"></script>
     <script>
       $(document).foundation();
     </script>
