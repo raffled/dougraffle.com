@@ -94,7 +94,7 @@ body.sticky-shrinknav-wrapper .sticky-shrinknav-header .sticky-shrinknav-header-
 }
 
 .timeline::before {
-    background: #222629;
+    background: #30363a;
     content: '';
     height: 100%;
     left: 50%;
@@ -111,8 +111,7 @@ body.sticky-shrinknav-wrapper .sticky-shrinknav-header .sticky-shrinknav-header-
 }
 
 .timeline a {
-    /* color: #fefefe; */
-    color: #222629
+    color: #30363a;
     font-weight: bold;
     transition: all 0.25s ease-in;
 }
@@ -128,7 +127,7 @@ body.sticky-shrinknav-wrapper .sticky-shrinknav-header .sticky-shrinknav-header-
 }
 
 .timeline .timeline-item .timeline-icon {
-    background: #222629;
+    background: #479761;
     border-radius: 50%;
     height: 50px;
     left: 50%;
@@ -159,16 +158,17 @@ body.sticky-shrinknav-wrapper .sticky-shrinknav-header .sticky-shrinknav-header-
 }
 
 .timeline .timeline-item .timeline-content p {
-    color: #222629;
+    color: #30363a;
 }
 
-.timeline .timeline-item .timeline-content p {
+.timeline .timeline-item .timeline-content p {    
     font-size: 16px;
     line-height: 1.4;
     margin-bottom: 0;
 }
 
 .timeline .timeline-item .timeline-content .timeline-content-date {
+    color: #222629;
     font-size: 16px;
     font-weight: bold;
     margin-bottom: 0;
@@ -187,9 +187,9 @@ body.sticky-shrinknav-wrapper .sticky-shrinknav-header .sticky-shrinknav-header-
 
 @media screen and (max-width: 39.9375em) {
     .timeline {
-	margin: 30px;
+	margin: 10px;
 	padding: 0;
-	width: 90%;
+	width: 99%;
     }
     .timeline::before {
 	left: 0;
