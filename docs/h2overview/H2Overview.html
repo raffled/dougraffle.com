@@ -282,45 +282,6 @@ slide:not(.current) .plotly.html-widget{
 <li>Shutting down your session</li>
 </ul>
 
-</article></slide><slide class=""><hgroup><h2>Kerberos</h2></hgroup><article  id="kerberos" class="smaller ">
-
-<p>Because H2O sits on top of Hadoop/Spark, you will need Hadoop access, and before spinning up an H2O session, you need to generate a valid Kerberos ticket to authenticate your session.</p>
-
-<p>Kerberos tickets are valid for 10 hours, and the ACE team has included an <code>hdfs.kinit</code> command in the <code>ace</code> package</p>
-
-<pre class = 'prettyprint lang-r'>library(ace)
-hdfs.kinit()</pre>
-
-<p>Alternatively, tickets can be generated from the command line using <code>kinit</code></p>
-
-<pre class = 'prettyprint lang-bash'>you@edoacehd02:~&gt; kinit
-Password for you@AD1.PROD:</pre>
-
-</article></slide><slide class=""><hgroup><h2>Initializing a Hadoop H2O Session</h2></hgroup><article  id="initializing-a-hadoop-h2o-session" class="smaller ">
-
-<p>The ACE team has created a helpful wrapper function to start H2O sessions. This function will construct the necessary Java commands to spin up an H2O session based on:</p>
-
-<ul>
-<li>Size of data (in GB): this should be the size of your data <em>in-memory</em>.</li>
-<li>Output directory: a directory (in HDFS) to store temporary files created during the session.</li>
-<li>Store only one copy: should only one copy of temporary files be stored for to save space? Answer &quot;y&quot;</li>
-</ul>
-
-<pre class = 'prettyprint lang-r'>&gt; h2oStart()
-[1] &quot;Checking to see if h2o is running...&quot;
-18/10/24 21:06:28 INFO client.AHSProxy: Connecting to Application History server at 0.0.0.0/0.0.0.0:10200
-18/10/24 21:06:28 INFO client.ConfiguredRMFailoverProxyProvider: Failing over to rm2
-[1] &quot;No h2o session found.&quot;
-[1] &quot;Checking for config...&quot;
-[1] &quot;No config found.  Calling build script.&quot;
-Enter your dataset size in GB: 2
-[1] &quot;Enter a folder in your HDFS home directory for output.&quot;
-WARN: this will overwrite the directory if it exists: h2out
-[1] &quot;LARGE OUTPUT ONLY:  Would you like to store only one copy of your output?&quot;
-Note the default is three for recovery purposes (y/n): y</pre>
-
-<p>For convenience, these settings are saved and can be reused next time using <code>h2oStart(reuse = TRUE)</code>.</p>
-
 </article></slide><slide class=""><hgroup><h2>H2O Flow</h2></hgroup><article  id="h2o-flow" class="smaller ">
 
 <p>H2O includes a UI for interacting with your session. While it&#39;s possible to orchestrate your workflow entirely from Flow, it can also be used to track the status of jobs started in R (or Python).</p>
